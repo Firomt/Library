@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js" defer></script>
     <title>Library</title>
 </head>
 <body>
+    <header class="header">
+        <h1>Library</h1>
+    </header>
     
+  
+        <div class="button-container">
+            <button id="btn"><svg xmlns="http://www.w3.org/2000/svg" height="40"width="60"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg> <p>Add a Book</p>
+              </button>
+        </div>
+          
+  
+
+    <dialog id="book-dialog">
+       <form>
+            <h3>New Book Entry</h3>
+            <label for="title">Title:
+                <input type="text">
+            </label> <br><br>
+            <label for="author">
+                Author:
+                <input type="text">
+            </label> <br> <br>
+            <label>
+                Pages:
+                <input type="text">
+            </label> <br> <br>
+            <label>
+                Have you read it: 
+                yes <input type="radio" name="option">
+                no <input type="radio" name="option">
+
+               
+            </label> <br><br>
+
+            <div>
+                <button value="cancel" formmethod="dialog">Cancel</button>
+              </div>
+          
+
+       </form>
+
+    </dialog>
+
+
+
 </body>
+
 </html>
