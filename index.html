@@ -25,28 +25,37 @@
     <dialog id="book-dialog">
        <form>
             <h3>New Book Entry</h3>
-            <label for="title">Title:
-                <input type="text">
-            </label> <br><br>
-            <label for="author">
-                Author:
-                <input type="text">
-            </label> <br> <br>
-            <label>
-                Pages:
-                <input type="text">
-            </label> <br> <br>
-            <label>
-                Have you read it: 
-                yes <input type="radio" name="option">
-                no <input type="radio" name="option">
+            <div class="form-group">
+                <label for="title">Title:
+                    <input type="text" class="title">
+                </label>
+            </div>
 
-               
-            </label> <br><br>
+            <div class="form-group">
+                <label for="author">
+                    Author:
+                    <input type="text" class="author">
+                </label>
+            </div> 
+            <div class="form-group">
+                <label>
+                    Pages:
+                    <input type="number" class="pages">
+                </label>
+            </div>
 
-            <div>
-                <button value="cancel" formmethod="dialog">Cancel</button>
-              </div>
+            <div class="form-group choose">
+                <label>
+                    Have you read it:
+                    yes <input type="radio" name="option">
+                    no <input type="radio" name="option">
+                
+                </label>
+            </div>
+
+            <div class="btn-submit">
+                <button type="submit" class="submit">Submit</button>
+            </div>
           
 
        </form>

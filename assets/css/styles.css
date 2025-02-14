@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(199, 254, 255);
+    background-color:rgb(255, 255, 255);
 }
 
 .header
@@ -10,7 +10,29 @@ body{
     justify-content: center;
     position: relative;
 }
-
+button{
+    display: flex;
+    justify-content: center;
+    background-color: #4F46E5;
+    color:whitesmoke ;
+    border: #1f2937;
+    border-radius: 2%;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+button:hover{
+    background-color: #362ddd;
+}
+button:active{
+    background-color: #1f16ce;
+}
+button svg{
+    margin-top: 2%;
+}
+button p{
+  width: 100%;
+}
 
 h1{
 
@@ -23,27 +45,64 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    button{
-        display: flex;
-        justify-content: center;
-        background-color: #4F46E5;
-        color:whitesmoke ;
-        border: #1f2937;
-        border-radius: 2%;
-        font-size: 16px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+#book-dialog{
+    background-color: rgb(219, 245, 245);
+    border-radius: 6%;
+    margin-top: 14%;
+
+
+    .form-group{
+        margin-bottom: 6%;
+        input{
+            height: 25px;
+            font-size: 16px;
+        }
         
     }
-    button:hover{
-        background-color: #362ddd;
+    .title{
+        margin-left: 8%;
     }
-    button:active{
-        background-color: #1f16ce;
+    .pages{
+        margin-left: 2%;
+        
     }
-    button svg{
-        margin-top: 2%;
-    }
-    button p{
-      width: 100%;
-    }
+    h3{
+    font-size: 24px;
+    text-align: center;
+    color: rgb(33, 137, 33);
+    font-weight:900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+    label{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 24px;
+      
+        
+    }  
+    input{
+      
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s ease;
+    } 
+    .btn-submit{
+        display: flex;
+        justify-content: center;
+    } 
+
+    .submit{
+      
+        width: 80%;
+        padding: 2%;
+        border: #1f2937;
+        border-radius: 5%;
+        font-size: 16px;
+        color:whitesmoke;
+        
+    }  
 }
