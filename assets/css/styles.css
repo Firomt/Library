@@ -61,11 +61,11 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
         
     }
-    .title{
+    #title{
         margin-left: 8%;
     }
-    .pages{
-        margin-left: 2%;
+    #pages{
+        margin-left: 1%;
         
     }
     h3{
@@ -106,8 +106,34 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         
     }  
 }
-
-#book-list h2{
+#book-list{
+    display: flex;
+    gap: 50px;
+    margin-left: 2%;
+    flex-wrap: wrap;
+}
+h2{
     color: black;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.book-card{
+ 
+    width: 25vh;
+    column-gap: 0px;
+    background-color: rgb(219, 245, 245);
+    padding: 2%;
+    border-radius: 4%;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    div{
+        margin-left: 4%;
+        button{
+           width: 100%;
+           border-radius: 5%;
+           padding: 2%;
+           background-color: rgb(250, 69, 69);
+        }
+    }
+
 }
