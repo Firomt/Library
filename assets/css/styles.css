@@ -106,3 +106,8 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         
     }  
 }
+
+#book-list h2{
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
