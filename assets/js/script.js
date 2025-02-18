@@ -51,4 +51,28 @@ bookDialog.addEventListener("click", (event) => {
 
             bookList.appendChild(bookCard);
         });
+
+
     }
+     // Event listener for form submission
+    document.getElementById("book-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const pages = document.getElementById("pages").value;
+        const checkbox = document.querySelector("input[name='read-status']");
+        const readStatus = checkbox.checked; // true if checked, false otherwise
+
+         // Add book to library
+         addBookToLibrary(title, author, pages, readStatus);
+
+        document.getElementById("book-dialog").close();
+
+        // Reset form
+        event.target.reset();
+
+    
+      });
+
+
