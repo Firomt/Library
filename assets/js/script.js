@@ -29,6 +29,26 @@ bookDialog.addEventListener("click", (event) => {
         const newBook = new Book(title, author, pages, readStatus);
         myLibrary.push(newBook);
         displayBooks(); // Refresh display after adding new book
+    }  
+
+  
+
+    //Function to display books
+    function displayBooks() {
+        const bookList = document.getElementById("book-list");
+
+        myLibrary.forEach((book, index) => {
+            const bookCard = document.createElement("div");
+            bookCard.classList.add("book-card");
+
+            bookCard.innerHTML = `
+                <h4>Title:${book.title}</h4>
+                <p><strong>Author:</strong> ${book.author}</p>
+                <p><strong>Pages:</strong> ${book.pages}</p>
+                <p><strong>Read:</strong> ${book.readStatus}</p>
+                <button class="delete-btn" data-index="${index}">Delete</button>
+            `;
+
+            bookList.appendChild(bookCard);
+        });
     }
-
-
