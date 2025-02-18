@@ -36,23 +36,28 @@ bookDialog.addEventListener("click", (event) => {
     //Function to display books
     function displayBooks() {
         const bookList = document.getElementById("book-list");
+        const lastIndex = myLibrary.length - 1;
+        const book = myLibrary[lastIndex];  //get the latest new book
+        if(book){
             
-        myLibrary.forEach((book, index) => {
-            const bookCard = document.createElement("div");
-            bookCard.classList.add("book-card");
-
-            bookCard.innerHTML = `
-                <div>
-                    <h4>Title: ${book.title}</h4>
-                    <p><strong>Author:</strong> ${book.author}</p>
-                    <p><strong>Pages:</strong> ${book.pages}</p>
-                    <p><strong>Read:</strong> ${book.readStatus}</p>
-                    <button class="delete-btn" data-index="${index}">Remove</button>
-                </div>
-            `;
-
-            bookList.appendChild(bookCard);
-        });
+            
+                const bookCard = document.createElement("div");
+                bookCard.classList.add("book-card");
+    
+                bookCard.innerHTML = `
+                    <div>
+                        <h4>Title: ${book.title}</h4>
+                        <p><strong>Author:</strong> ${book.author}</p>
+                        <p><strong>Pages:</strong> ${book.pages}</p>
+                        <p><strong>Read:</strong> ${book.readStatus}</p>
+                        <button class="delete-btn" data-index="${lastIndex}">Remove</button>
+                    </div>
+                `;
+    
+                bookList.appendChild(bookCard);
+            
+        }
+        
 
 
     }
