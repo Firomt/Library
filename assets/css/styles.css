@@ -103,8 +103,21 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         border-radius: 5%;
         font-size: 16px;
         color:whitesmoke;
+        margin-left: 11%;
         
     }  
+}
+
+.read-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    input[type="checkbox"] {
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 20px; 
+        height: 20px; }
 }
 #book-list{
     display: flex;
@@ -128,12 +141,16 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     div{
         margin-left: 4%;
-        .delete-btn{
+        .delete-btn,
+        .toggle-read-btn{
            width: 100%;
            border-radius: 5%;
            padding: 2%;
-           background-color: rgb(251, 67, 67);
           
+          
+        }
+        .delete-btn{
+            background-color: rgb(251, 67, 67);
         }
         .delete-btn:hover{
             background-color: rgb(200, 36, 24);
@@ -141,7 +158,17 @@ h2{
         .delete-btn:active{
             background-color: rgb(225, 0, 0);
         }
-        
+
+        .toggle-read-btn{
+          margin-bottom: 10px;
+        }
+        .btn-read{
+            background-color: rgb(48, 181, 48);
+        }
+        .btn-not-read{
+            background-color: gray;
+        }
+
     }
 
 }

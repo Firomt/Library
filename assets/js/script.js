@@ -37,7 +37,7 @@ function displayBooks() {
         const bookCard = document.createElement("div");
         bookCard.classList.add("book-card");
        
-        const toggleButtonText = book.readStatus ? "Read" : "NotRead";
+        const toggleButtonText = book.readStatus ? "Read" : "Not Read";
         const buttonClass = book.readStatus ? "btn-read" : "btn-not-read";
         bookCard.innerHTML = `
             <div>
