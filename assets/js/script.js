@@ -37,13 +37,14 @@ function displayBooks() {
         const bookCard = document.createElement("div");
         bookCard.classList.add("book-card");
        
-
+        const toggleButtonText = book.readStatus ? "Read" : "NotRead";
+        const buttonClass = book.readStatus ? "btn-read" : "btn-not-read";
         bookCard.innerHTML = `
             <div>
                 <h4>Title: ${book.title}</h4>
                 <p><strong>Author:</strong> ${book.author}</p>
                 <p><strong>Pages:</strong> ${book.pages}</p>
-                <p><strong>Read:</strong> ${book.readStatus ? "Yes" : "No"}</p>
+                <button class="toggle-read-btn ${buttonClass}" data-index="${index}">${toggleButtonText}</button>
                 <button class="delete-btn" data-index="${index}">Remove</button>
             </div>
         `;
@@ -79,4 +80,19 @@ document.getElementById("book-list").addEventListener("click", function(event) {
         // Re-render book list
         displayBooks();
     }
+
+    if (event.target.classList.contains("toggle-read-btn")) {
+        const index = parseInt(event.target.getAttribute("data-index"), 10);
+
+        // Toggle read status of the book
+        if (myLibrary[index]) {
+            myLibrary[index].toggleReadStatus();
+            displayBooks(); // Refresh the display for the updated book
+        }
+    }
 });
+
+//method to toggle read status
+Book.prototype.toggleReadStatus = function() {
+    this.readStatus = !this.readStatus; // Toggle read status
+};

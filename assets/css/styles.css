@@ -128,19 +128,20 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     div{
         margin-left: 4%;
-        button{
+        .delete-btn{
            width: 100%;
            border-radius: 5%;
            padding: 2%;
            background-color: rgb(251, 67, 67);
           
         }
-        button:hover{
+        .delete-btn:hover{
             background-color: rgb(200, 36, 24);
         }
-        button:active{
+        .delete-btn:active{
             background-color: rgb(225, 0, 0);
         }
+        
     }
 
 }
