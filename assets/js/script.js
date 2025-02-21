@@ -96,3 +96,4 @@ document.getElementById("book-list").addEventListener("click", function(event) {
 Book.prototype.toggleReadStatus = function() {
     this.readStatus = !this.readStatus; // Toggle read status
 };
+

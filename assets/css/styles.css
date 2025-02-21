@@ -172,3 +172,23 @@ h2{
     }
 
 }
+
+dialog[open]    {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  
+  /* Closed state of the dialog   */
+  dialog {
+    opacity: 0;
+    transform: scaleY(0);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out,
+      overlay 0.7s ease-out allow-discrete,
+      display 0.7s ease-out allow-discrete;
+  }
+
+  
+  
+  
